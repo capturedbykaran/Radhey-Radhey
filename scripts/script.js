@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const SECRET = '0827'; // classic "Her DOB" code
 
     // If already unlocked, go to menu immediately
-  if (localStorage.getItem('unlocked') === '1') {
+  if (sessionStorage.getItem('unlocked') === '1') {
     window.location.href = 'pages/menu.html';
     return;
   }
@@ -73,7 +73,7 @@ if (digits.length) digits[0].focus();
 
 function revealSuccess(){
   // persist the unlocked state so reloads redirect automatically
-  try { localStorage.setItem('unlocked', '1'); } catch (e) { /* ignore if storage not available */ }
+  try { sessionStorage.setItem('unlocked', '1'); } catch (e) { /* ignore if storage not available */ }
 
   // subtle success animation then reveal main content / redirect
   card.style.transition = 'opacity .5s, transform .5s';
