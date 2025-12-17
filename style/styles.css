@@ -1,0 +1,119 @@
+:root{
+  --bg1: #070612;
+  --bg2: #0e0920;
+  --card: rgba(255,255,255,0.03);
+  --muted: #9aa6b8;
+  --accent: linear-gradient(90deg,#ff5db0,#8a2bff);
+  --pink: #ff6ba0;
+  --glass: rgba(255,255,255,0.03);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, system-ui, Arial, sans-serif}
+body{
+  background: radial-gradient(ellipse at 20% 10%, rgba(138,43,226,0.09), transparent 8%),
+              linear-gradient(180deg,var(--bg1) 0%, var(--bg2) 100%);
+  color:#eaf2ff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* decorative */
+.stars {
+  position:fixed; inset:0; pointer-events:none;
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 120px 120px;
+  opacity: 0.03;
+}
+
+/* center */
+.center-wrap{
+  min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px;
+}
+
+/* card */
+.card{
+  width: min(760px, 94vw);
+  max-width:760px;
+  border-radius:20px;
+  padding:28px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 40px rgba(2,6,23,0.65);
+  border: 1px solid rgba(255,255,255,0.03);
+  text-align:center;
+  position:relative;
+}
+
+/* lock icon area */
+.lock-ico{ display:flex; justify-content:center; margin-bottom:6px; }
+
+/* text */
+.title{
+  font-family: 'Baloo 2', cursive;
+  font-size:1.8rem;
+  margin:6px 0 6px;
+  color: #ffd7ec;
+  letter-spacing:0.4px;
+}
+.sub{ color:var(--muted); font-size:1rem; margin:0 0 6px; }
+.sub .pink{ color:var(--pink); margin-left:6px; }
+
+.hint{ color: #c6d0df; opacity:0.9; margin:8px 0 18px; font-size:0.95rem; }
+
+/* code inputs */
+.code-area{ display:flex; flex-direction:column; gap:12px; align-items:center; margin-top:6px }
+.code-inputs{
+  display:flex; gap:18px; padding:14px 18px; width:90%; max-width:520px;
+  border-radius:12px; background: rgba(255,255,255,0.01);
+  border:1px solid rgba(255,255,255,0.02);
+  justify-content:center;
+}
+.digit{
+  appearance:none; -webkit-appearance:none;
+  width:72px; height:64px; border-radius:12px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.012), rgba(255,255,255,0.006));
+  border: 1px solid rgba(255,255,255,0.02);
+  outline:none; text-align:center; font-size:22px; font-weight:700; color:#fff;
+  caret-color: transparent;
+  box-shadow: inset 0 -6px 18px rgba(255,255,255,0.01);
+}
+
+/* show faint heart as placeholder via background */
+.digit::placeholder{
+  color: rgba(255, 255, 255, 0.25);
+}
+.digit:focus{ box-shadow: 0 6px 28px rgba(138,43,226,0.12); transform: translateY(-2px); transition: transform .12s; }
+
+/* Heart decoration inside each input when empty using pseudo-element (we'll rely on placeholder instead) */
+.digit.value::before{ content:'❤'; }
+
+/* unlock button */
+.unlock-btn{
+  margin-top:6px;
+  background: linear-gradient(90deg,#ff5db0,#8a2bff);
+  border:none; color:white; padding:12px 22px; border-radius:14px;
+  font-weight:700; font-family:'Baloo 2', cursive; font-size:1.02rem;
+  display:flex; gap:10px; align-items:center; justify-content:center;
+  cursor:pointer; box-shadow: 0 8px 30px rgba(138,43,226,0.12);
+}
+.unlock-btn .heart-left, .unlock-btn .heart-right{ opacity:0.9; font-size:18px }
+.unlock-btn:active{ transform: translateY(1px) }
+
+/* small note */
+.small-note{ margin-top:12px; color:var(--muted); font-size:0.9rem; opacity:0.9 }
+
+/* unlocked main content */
+.main-content{
+  padding:40px; text-align:center; color:#e6eef8;
+}
+.welcome h2{ font-size:1.6rem; color:#ffd7ec; margin-top:8px }
+
+/* responsiveness */
+@media (max-width:480px){
+  .digit{ width:56px; height:56px; font-size:20px }
+  .card{ padding:20px; border-radius:16px }
+  .title{ font-size:1.5rem }
+  .unlock-btn{ padding:10px 16px; font-size:0.95rem }
+}
+     

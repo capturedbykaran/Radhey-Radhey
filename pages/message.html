@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>You Light Up My World 🌟</title>
+
+  <!-- shared project styles -->
+  <link rel="stylesheet" href="../style/styles.css">
+
+  <!-- page-specific styles -->
+  <link rel="stylesheet" href="../style/message.css">
+
+  <!-- fonts (optional if already included in shared stylesheet) -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="hearts" class="hearts" aria-hidden="true"></div>
+
+  <main class="container" role="main" aria-labelledby="pageTitle">
+    <h1 id="pageTitle">Hey Beautiful! 💖</h1>
+
+    <section class="cards" aria-live="polite">
+      <article class="compliment-card" tabindex="0" data-idx="0">
+        <div class="emoji" aria-hidden="true">🌟</div>
+        <div class="compliment-text">Your smile is literally my favorite thing in the entire universe!</div>
+      </article>
+
+      <article class="compliment-card" tabindex="0" data-idx="1">
+        <div class="emoji" aria-hidden="true">💕</div>
+        <div class="compliment-text">You're like my favorite song — I could listen to you forever!</div>
+      </article>
+
+      <article class="compliment-card" tabindex="0" data-idx="2">
+        <div class="emoji" aria-hidden="true">✨</div>
+        <div class="compliment-text">Your eyes are so deep, I’d dive in without ever wanting to come back.</div>
+      </article>
+
+      <article class="compliment-card" tabindex="0" data-idx="3">
+        <div class="emoji" aria-hidden="true">🌈</div>
+        <div class="compliment-text">You make my heart do the happy dance every single day!</div>
+      </article>
+    </section>
+
+    <div class="final-message" role="region" aria-label="Final message">
+      <strong>I can't stop thinking about you... 💭</strong>
+      <p class="final-sub">You're not just special, you're my favorite notification! 📱💖</p>
+      <div class="actions">
+        <button id="copyBtn" class="btn">Copy message</button>
+        <a href="menu.html" class="btn" style="background:rgba(255,255,255,0.06); color:#e6eef8; text-decoration:none;">← Back to Menu</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="../scripts/message.js" defer></script>
+</body>
+</html>
