@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Review 💌</title>
+
+  <link rel="stylesheet" href="../style/styles.css">
+  <link rel="stylesheet" href="../style/review.css">
+</head>
+<body>
+
+<div class="center-wrap">
+  <div class="card review-card">
+    <h1 class="title">Your Honest Review 💖</h1>
+    <p class="subtitle">This means a lot to me… be real 😊</p>
+
+    <form id="reviewForm">
+      <label>
+        Your Name (optional)
+        <input type="text" id="name" placeholder="Your beautiful name">
+      </label>
+
+      <label>
+        Rate this website ⭐ (out of 10)
+        <input type="number" id="rating" min="1" max="10" required>
+      </label>
+
+      <label>
+        Your Review 💬
+        <textarea id="reviewText" rows="4" placeholder="Write anything you feel..." required></textarea>
+      </label>
+
+      <button type="submit" class="btn">Submit Review</button>
+    </form>
+
+    <p id="successMsg" class="success hidden">Thank you for your review 💕</p>
+
+    <a href="menu.html" class="back">← Back to Menu</a>
+  </div>
+</div>
+
+<script src="../scripts/review.js"></script>
+</body>
+</html>
