@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reviews Data 🔒</title>
+
+  <link rel="stylesheet" href="../style/styles.css">
+  <link rel="stylesheet" href="../styles/reviews_data.css">
+</head>
+<body>
+
+<div class="center-wrap">
+
+  <!-- PASSWORD SCREEN -->
+  <div class="card admin-card" id="loginBox">
+    <h2>Admin Access 🔐</h2>
+    <p class="small">Only for creator</p>
+
+    <input type="password" id="adminPassword" placeholder="Enter admin password">
+    <button class="btn" id="loginBtn">Unlock</button>
+
+    <p id="error" class="error hidden">Wrong password ❌</p>
+  </div>
+
+  <!-- REVIEWS DATA -->
+  <div class="card admin-card hidden" id="dataBox">
+    <h2>All Reviews ⭐</h2>
+    <div id="reviewsContainer"></div>
+
+    <div class="admin-actions">
+      <button class="btn" id="clearBtn">Clear Reviews</button>
+      <button class="btn" id="logoutBtn">Lock</button>
+    </div>
+
+    <a href="menu.html" class="back">← Back to Menu</a>
+  </div>
+
+</div>
+
+<script src="../scripts/reviews_data.js"></script>
+</body>
+</html>
