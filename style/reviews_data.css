@@ -1,0 +1,64 @@
+.admin-card {
+  max-width: 650px;
+  padding: 30px;
+  text-align: center;
+}
+
+.admin-card h2 {
+  font-family: 'Baloo 2', cursive;
+  color: #ffd7ec;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 14px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  color: #fff;
+}
+
+.error {
+  margin-top: 10px;
+  color: #ff6b6b;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Reviews */
+.review-item {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  padding: 14px;
+  margin-top: 14px;
+  text-align: left;
+}
+
+.review-item strong {
+  color: #ffb3d6;
+}
+
+.review-time {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* buttons */
+.admin-actions {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.back {
+  display: inline-block;
+  margin-top: 16px;
+  color: var(--muted);
+  text-decoration: none;
+}
